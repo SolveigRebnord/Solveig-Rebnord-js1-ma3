@@ -1,25 +1,8 @@
-console.log("heloo");
+console.log("heloo2");
 
-
-// Q1
-
-function getRemainder(a,b) {
-    return a % b;
-}
-
-// to arrow function:
-
-getRemainder = (a,b) => a%b;
-
-console.log(getRemainder(4,5));
 
 
 // Q2
-
-
-
-
-outPut = document.getElementById("Hey");
 
 
 
@@ -36,14 +19,16 @@ fetch ("https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rati
 
 
 
+outPut = document.getElementById("Hey");
 
 function soonFunction(list) {
 
     outPut.innerHTML = "";
     
-    let slicedLIst = list.slice (0, 8); //Kunne satt denne i fetch heller
+    let slicedLIst = list.slice (0, 8); //Kunne satt denne i fetch og
+
     for (let item of slicedLIst) {
-    
+        
     let newDiv = "";
     newDiv =
     `<div>
@@ -58,14 +43,16 @@ function soonFunction(list) {
 
 
 
-// hvordan få det til med break istedenfor slice?
+
+
 /*
+// hvordan få det til med break istedenfor slice?
+
 function soonFunction(list) {
 
     outPut.innerHTML = "";
-    
     for (let item of list) {
-    
+
     let newDiv = "";
     newDiv =
     `<div>
@@ -75,9 +62,9 @@ function soonFunction(list) {
     </div>
     `
     outPut.innerHTML += newDiv;
-}
+    if (item > max) {break};
 
-if (item > 8) {break};
+}
 }
 */
 
@@ -85,9 +72,9 @@ if (item > 8) {break};
 
 
  
-/* Hvordan bruke vanlig for, og accessere objekt properties? Hva må inni ${ }?
+/* Hvordan bruke vanlig for, og accessere objekt properties? Hva må inni ${ }? Må skrive list[i].name
 
-function soonFunction() {
+function soonFunction(list) {
 for (let i = 0; i < 8; i++) {
     let newDiv = "";
     newDiv =
@@ -99,4 +86,3 @@ for (let i = 0; i < 8; i++) {
 }
 }
 */
-
